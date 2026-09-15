@@ -27,9 +27,5 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Exponer el puerto 80
 EXPOSE 80
 
-# Healthcheck para orquestadores (Docker Swarm, Kubernetes, Coolify, Portainer)
-HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
-  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
-
 # Comando de arranque
 CMD ["nginx", "-g", "daemon off;"]
