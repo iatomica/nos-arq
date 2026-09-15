@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FBF9F5;
+    color: #1C1A18;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Taste-Skill Custom Fine Dividers and Tactile Micro-Interactions */
+.editorial-line {
+  height: 1px;
+  background-color: #E8E3DA;
+}
+
+.terracotta-accent {
+  color: #A86B4C;
+}
+
+.bg-terracotta-accent {
+  background-color: #A86B4C;
+}
+
+.border-subtle {
+  border-color: #E8E3DA;
+}
+
+/* Custom scrollbar for Kanban & Document views */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5ADA1;
+}
